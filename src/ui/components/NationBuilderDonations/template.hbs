@@ -1,1 +1,14 @@
-<div><h1>Welcome to Glimmer!</h1></div>
+<Navigation @location={{location}} />
+<hr>
+<div>
+  Amount: {{amount}}
+</div>
+{{#if showAmount}}
+  <Amount 
+    @donationAmounts={{donationAmounts}} 
+    @onUpdate={{action updateAmount}} 
+  />
+{{/if}}
+{{#if showDetails}}
+  <Details />
+{{/if}}

@@ -1,0 +1,14 @@
+<div>
+  <form class='donation-amounts'>
+    {{#each @donationAmounts key="@index" as |amount|}}
+      <input 
+        type="radio" 
+        name="amount" 
+        id="donation_amount_{{amount}}" 
+        value={{amount}}
+        onclick={{action @onUpdate amount}}
+      >
+      <label for="donation_amount_{{amount}}">£{{amount}}</label>
+    {{/each}}
+  </form>
+</div>

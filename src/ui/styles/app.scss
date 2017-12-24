@@ -1,3 +1,16 @@
-h1 {
-  color: #444;
+form.donation-amounts {
+  display: flex;
+  margin-bottom: 1rem;
+  input {
+    display: none;
+  }
+  input:checked + label {
+    background: green;
+  }
+  label {
+    padding: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    background: red
+  }
 }
